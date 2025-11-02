@@ -1,7 +1,3 @@
----
-import "../styles/global.css";
----
-
 <!doctype html>
 <html lang="id">
   <head>
@@ -11,115 +7,9 @@ import "../styles/global.css";
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
-
-      * {
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-
-      .gradient-bg {
-        background: linear-gradient(
-          135deg,
-          #fff5f0 0%,
-          #ffe5d9 25%,
-          #ffd4bf 50%,
-          #ffe5d9 75%,
-          #fff5f0 100%
-        );
-        background-size: 400% 400%;
-        animation: gradientShift 15s ease infinite;
-      }
-
-      @keyframes gradientShift {
-        0%,
-        100% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-      }
-
-      .pulse-slow {
-        animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-      }
-
-      .card-hover {
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-
-      .card-hover:hover {
-        transform: translateY(-8px) scale(1.02);
-      }
-
-      .text-gradient {
-        background: linear-gradient(
-          135deg,
-          #92400e 0%,
-          #f59e0b 50%,
-          #92400e 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        background-size: 200% auto;
-        animation: shimmer 3s linear infinite;
-      }
-
-      @keyframes shimmer {
-        to {
-          background-position: 200% center;
-        }
-      }
-
-      .glass {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.8);
-      }
-
-      @keyframes bounce {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .floating {
-        animation: bounce 2s ease-in-out infinite;
-      }
-
-      .float-delayed {
-        animation: bounce 2s ease-in-out 1s infinite;
-      }
-
-      .shine {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .shine::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.4),
-          transparent
-        );
-        transition: left 0.5s;
-      }
-
-      .shine:hover::before {
-        left: 100%;
-      }
     </style>
+
+
   </head>
   <body class="gradient-bg min-h-screen">
     <!-- Decorative Floating Elements - Hidden on mobile -->
@@ -388,9 +278,9 @@ import "../styles/global.css";
             </div>
           </div>
           <div
-            class="flex-1 text-6xl sm:text-8xl lg:text-9xl text-center order-1 md:order-2 floating"
+            class="flex text-6xl sm:text-8xl lg:text-9xl text-center order-1 md:order-2 "
           >
-            ☕
+            <img src="assets/images/relaxed.png" alt="" srcset="" class="w-60">
           </div>
         </div>
       </div>
@@ -429,7 +319,7 @@ import "../styles/global.css";
         <div
           class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border-2 border-pink-100 shadow-xl card-hover"
         >
-          <div class="text-5xl sm:text-7xl mb-4 sm:mb-6 floating">🎨</div>
+          <div class="text-5xl sm:text-7xl mb-4 sm:mb-6 ">🎨</div>
           <h3
             class="text-2xl sm:text-3xl font-bold text-amber-900 mb-3 sm:mb-4"
           >
@@ -464,7 +354,7 @@ import "../styles/global.css";
         <div
           class="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border-2 border-sky-100 shadow-xl card-hover"
         >
-          <div class="text-5xl sm:text-7xl mb-4 sm:mb-6 float-delayed">🧘‍♀️</div>
+          <div class="text-5xl sm:text-7xl mb-4 sm:mb-6 ">🧘‍♀️</div>
           <h3
             class="text-2xl sm:text-3xl font-bold text-amber-900 mb-3 sm:mb-4"
           >
@@ -536,7 +426,7 @@ import "../styles/global.css";
       <!-- Community Values -->
       <div class="text-center space-y-6 sm:space-y-10 mb-12 sm:mb-20">
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-900">
-          Yang kami jaga bersama ✨
+          Yang kami jaga bersama
         </h2>
         <div
           class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto"
@@ -544,7 +434,7 @@ import "../styles/global.css";
           <div
             class="glass rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-lg card-hover"
           >
-            <div class="text-4xl sm:text-6xl mb-2 sm:mb-4 floating">🤝</div>
+            <div class="text-4xl sm:text-6xl mb-2 sm:mb-4 ">🤝</div>
             <p class="text-sm sm:text-base lg:text-lg text-amber-900 font-bold">
               Saling menghormati
             </p>
@@ -552,7 +442,7 @@ import "../styles/global.css";
           <div
             class="glass rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-lg card-hover"
           >
-            <div class="text-4xl sm:text-6xl mb-2 sm:mb-4 float-delayed">
+            <div class="text-4xl sm:text-6xl mb-2 sm:mb-4">
               🔒
             </div>
             <p class="text-sm sm:text-base lg:text-lg text-amber-900 font-bold">
@@ -562,7 +452,7 @@ import "../styles/global.css";
           <div
             class="glass rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-lg card-hover"
           >
-            <div class="text-4xl sm:text-6xl mb-2 sm:mb-4 floating">💪</div>
+            <div class="text-4xl sm:text-6xl mb-2 sm:mb-4">💪</div>
             <p class="text-sm sm:text-base lg:text-lg text-amber-900 font-bold">
               Saling mendukung
             </p>
@@ -570,7 +460,7 @@ import "../styles/global.css";
           <div
             class="glass rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-lg card-hover"
           >
-            <div class="text-4xl sm:text-6xl mb-2 sm:mb-4 float-delayed">
+            <div class="text-4xl sm:text-6xl mb-2 sm:mb-4">
               🌟
             </div>
             <p class="text-sm sm:text-base lg:text-lg text-amber-900 font-bold">
